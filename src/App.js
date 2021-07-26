@@ -40,7 +40,8 @@ export default function App() {
     if (
       DateOfBirth !== "" &&
       luckyNumber !== "" &&
-      parseInt(luckyNumber, 10) !== 0
+      parseInt(luckyNumber, 10) > 0 &&
+      Number.isInteger(parseFloat(luckyNumber))
     ) {
       const num = convertDateToNum(DateOfBirth);
       const sumOfDigits = getSumOfDigits(num);
